@@ -1,5 +1,3 @@
-﻿using System.Threading.Tasks;
+namespace MiniAspnet;
 
-namespace MiniAspnet {
-    public delegate Task RequestDelegate(HttpContext context);
-}
+public delegate Task RequestDelegate(HttpContext context);

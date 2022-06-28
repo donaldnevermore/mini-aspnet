@@ -1,18 +1,14 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Hosting;
+namespace MiniAspnet;
 
-namespace MiniAspnet {
-    public class WebHostedService : IHostedService {
-        private readonly IServer server;
-        private readonly RequestDelegate handler;
+public class WebHostedService : IHostedService {
+    private readonly IServer server;
+    private readonly RequestDelegate handler;
 
-        public WebHostedService(IServer server, RequestDelegate handler) {
-            this.server = server;
-            this.handler = handler;
-        }
-
-        public Task StartAsync(CancellationToken cancellationToken) => server.StartAsync(handler);
-        public Task StopAsync(CancellationToken cancellationToken) => Task.CompletedTask;
+    public WebHostedService(IServer server, RequestDelegate handler) {
+        this.server = server;
+        this.handler = handler;
     }
+
+    public Task StartAsync(CancellationToken cancellationToken) => server.StartAsync(handler);
+    public Task StopAsync(CancellationToken cancellationToken) => Task.CompletedTask;
 }

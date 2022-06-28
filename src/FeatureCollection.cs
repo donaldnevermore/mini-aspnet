@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+namespace MiniAspnet;
 
-namespace MiniAspnet {
-    public class FeatureCollection : Dictionary<Type, object>, IFeatureCollection {
-    }
+public class FeatureCollection : Dictionary<Type, object>, IFeatureCollection {
 }

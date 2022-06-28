@@ -1,7 +1,5 @@
-﻿using System.Threading.Tasks;
+namespace MiniAspnet;
 
-namespace MiniAspnet {
-    public interface IServer {
-        Task StartAsync(RequestDelegate handler);
-    }
+public interface IServer {
+    Task StartAsync(RequestDelegate handler);
 }

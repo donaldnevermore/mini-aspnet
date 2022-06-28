@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+namespace MiniAspnet;
 
-namespace MiniAspnet {
-    public interface IFeatureCollection : IDictionary<Type, object> {
-    }
+public interface IFeatureCollection : IDictionary<Type, object> {
 }

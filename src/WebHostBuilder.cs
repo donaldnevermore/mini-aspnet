@@ -1,13 +1,11 @@
-﻿using Microsoft.Extensions.Hosting;
+namespace MiniAspnet;
 
-namespace MiniAspnet {
-    public class WebHostBuilder {
-        public IHostBuilder HostBuilder { get; }
-        public IApplicationBuilder ApplicationBuilder { get; }
+public class WebHostBuilder {
+    public IHostBuilder HostBuilder { get; }
+    public IApplicationBuilder ApplicationBuilder { get; }
 
-        public WebHostBuilder(IHostBuilder hostBuilder, IApplicationBuilder applicationBuilder) {
-            HostBuilder = hostBuilder;
-            ApplicationBuilder = applicationBuilder;
-        }
+    public WebHostBuilder(IHostBuilder hostBuilder, IApplicationBuilder applicationBuilder) {
+        HostBuilder = hostBuilder;
+        ApplicationBuilder = applicationBuilder;
     }
 }
